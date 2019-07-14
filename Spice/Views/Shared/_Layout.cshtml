@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Spice</title>
     <script src="https://kit.fontawesome.com/2d15ae8c18.js"></script>
+    <script src="https://cdn.tiny.cloud/1/slbyoy421oqlbky6wa4n7tqlo01zqml6nipva5hnf8yugm52/tinymce/5/tinymce.min.js"></script>
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     </environment>
@@ -36,7 +37,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
                                 <a class="dropdown-item" asp-action="Index" asp-controller="Category" asp-area="Admin">Category</a>
                                 <a class="dropdown-item" asp-action="Index" asp-controller="SubCategory" asp-area="Admin">Sub Category</a>
-                                <a class="dropdown-item">MenuItems</a>
+                                <a class="dropdown-item" asp-action="Index" asp-controller="MenuItem" asp-area="Admin">Menu Item</a>
                                 <a class="dropdown-item">Coupons</a>
                                 <a class="dropdown-item">Users</a>
                             </div>

@@ -123,7 +123,7 @@ namespace Spice.Areas.Admin.Controllers
                     var subCatFromDb = await _db.SubCategory.FindAsync(id);
                     subCatFromDb.Name = model.SubCategory.Name;
 
-                    _db.SubCategory.Add(model.SubCategory);
+                    //_db.SubCategory.Add(model.SubCategory);
                     await _db.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
@@ -192,7 +192,7 @@ namespace Spice.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id, SubCategoryAndCategoryViewModel model)
         {
-            var subCategory = await _db.SubCategory.FindAsync(model.SubCategory.Id);
+            var subCategory = await _db.SubCategory.FindAsync(id);
             if (subCategory == null)
             {
                 return View();
